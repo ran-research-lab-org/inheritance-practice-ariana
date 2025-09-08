@@ -15,12 +15,12 @@ protected:
 // Methods
 public:
 	// TODO: Constructor
-    Employee(string name, int id, string type);
+    Employee(const string& name, int id, const string& type);
 
     virtual ~Employee() {}
 
     // Virtual function to calculate payment
-    virtual double calculatePay() const = 0;
+    virtual double calculatePay const () = 0; 
 
     // TODO: Getters
     string getType();
