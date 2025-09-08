@@ -1,21 +1,19 @@
 #include "SalariedEmployee.h"
+#include <string>
+using namespace std;
 
-SalariedEmployee::SalariedEmployee(const std::string& name, int id, double yearlyPayment)
-: {
+
+
+SalariedEmployee::SalariedEmployee(const string& name, int id, double YearlyPayment)
+:Employee(name, id, "Salaried"), YearlyPayment(YearlyPayment){}
     // TODO: 
-    this->name=name;
-    this->id=id;
-    this->YearlyPayment=YearlyPayment;
-    this->type="Salaried";
-
-
-}
+    
 /*TODO: calculate Payment */
-Salaried::double getYearlyPayment(){
-    return(getYearlyPayment);
+double SalariedEmployee::getYearlyPayment(){
+    return YearlyPayment;
 }
 
-SalariedEmployee::double calculatePay(){
-    return(yearlyPayment/26);
+double SalariedEmployee::calculatePay() const{
+    return(YearlyPayment/26);
 }
 /* IMPLEMENT GETTERS*/

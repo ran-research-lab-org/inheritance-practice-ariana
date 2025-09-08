@@ -1,24 +1,23 @@
 #include "HourlyEmployee.h"
+#include <string>
+using namespace std;
 
-HourlyEmployee::HourlyEmployee(const std::string& name, int id, 
-                                double payPerHour, double workedHours)
-{
+
+HourlyEmployee::HourlyEmployee(const string& name, int id, double payPerHour, double workedHours)
+:Employee(name, id, "Hourly"), 
+payPerHour(payPerHour),
+workedHours(workedHours){ }
     // TODO: 
-    this->name=name;
-    this->id=id;
-    this->payPerHour=payPerHour;
-    this->workedHours=workedHours;
-    this->type="Hourly";
-}
+   
 
 /*TODO: calculate Payment */
-HourlyEmployee::double getPayPerHour(){
+double HourlyEmployee::getPayPerHour(){
         return payPerHour;
     }
-HourlyEmployee::double getWorkedHours(){
+double HourlyEmployee::getWorkedHours(){
         return workedHours;
     }
 
-HourlyEmployee::double calculatePay(){
+double HourlyEmployee::calculatePay() const{
     return(payPerHour * workedHours);
 }

@@ -1,6 +1,8 @@
 #include "Employee.h"
+#include <string>
+using namespace std;
 
-Employee::Employee(const std::string& name, int id, const std::string& type)
+Employee::Employee(const string& name, int id, const string& type)
 {
   // TODO:
   this->name=name;
@@ -10,10 +12,14 @@ Employee::Employee(const std::string& name, int id, const std::string& type)
 
 /* IMPLEMENT GETTERS*/
 
-Employee:: string getType(){
-  return id;
+string Employee::getType(){
+  return type;
 }
    
-Employee::string getName(){
+string Employee::getName(){
   return name;
+}
+
+int Employee::getID(){
+  return id;
 }
